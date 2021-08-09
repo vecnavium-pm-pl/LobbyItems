@@ -26,7 +26,7 @@ events:
 #To avoid any errors, be sure you follow the exact pattern or else you will get errors
 
 lobby-items:
-  - 345-0-1-4-§l§4First item-help
-  - 345-0-1-4-§l§4Second item-say
+  - 345-0-1-1-§l§4First item-help
+  - 345-0-1-6-§l§4Second item-say
 
 #====================================================================================#
