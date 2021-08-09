@@ -11,7 +11,6 @@ class Listeners implements Listener {
 
 
     public function onJoin(PlayerJoinEvent $event) {
-        $event->getPlayer()->getInventory()->clearAll();
         foreach (Main::getInstance()->lobbyitemconfigurations()->get("lobby-items") as $item) {
             Main::getInstance()->giveItems($event->getPlayer(), explode("-", $item));
         }
