@@ -1,0 +1,32 @@
+#==========================================#
+#Config File for LobbyItems
+#==========================================#
+
+#====================================================================================#
+
+# Here you can either enable or disable the player to move the items in their inventory.
+# This will not affect in all worlds only where players join with their lobby items.
+# If it does cause any problems set this to true and create an issue over at(https://github.com/Vecnavium/LobbyItems/issues)
+
+events:
+  move-inventory-items: true
+
+
+# Here is a template on how you configure it. You can copy paste the one below the tutorial if you wish.
+
+# lobby-items: DO NOT MODIFY THIS OR ELSE THE PLUGIN WILL NOT WORK!
+#  - 345-0-1-4-§l§4First item-help
+
+# 280 is the item ID. You can get a list of Item IDS here: https://minecraft-ids.grahamedgecombe.com
+# 0 Is the meta. There usually is no need to change it to any higher or negative number.
+# 1 is the amount you want to provide them. (Amount of items for that lobby item)
+# 4 Is the slot number. Not sure how it works? Go here: https://github.com/Vecnavium/LobbyItems/blob/master/inventory%20numbers.png
+# And lastly, the final one which says "help" thats where you put what you want the item it to execute (command)
+
+#To avoid any errors, be sure you follow the exact pattern or else you will get errors
+
+lobby-items:
+  - 345-0-1-4-§l§4First item-help
+  - 345-0-1-4-§l§4Second item-say
+
+#====================================================================================#
