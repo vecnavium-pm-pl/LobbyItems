@@ -10,6 +10,7 @@
 
 events:
   move-inventory-items: true
+  drop-inventory-items: false
 
 
 # Here is a template on how you configure it. You can copy paste the one below the tutorial if you wish.

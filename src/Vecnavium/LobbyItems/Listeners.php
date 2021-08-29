@@ -12,6 +12,7 @@ use pocketmine\event\Listener;
 use pocketmine\event\inventory\InventoryTransactionEvent;
 use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\event\player\PlayerJoinEvent;
+use pocketmine\event\player\PlayerDropItemEvent;
 
 class Listeners implements Listener {
 
@@ -30,6 +31,10 @@ class Listeners implements Listener {
             $get = explode("-", $item);
             if ($itemid == $get[0] && $itemmeta == $get[1] && $itemname === "$get[4]") Main::getInstance()->getServer()->dispatchCommand($event->getPlayer(), "$get[5]");
         }
+    }
+
+    public function onDrop(PlayerDropItemEvent $event) {
+        if(Main::getInstance()->lobbyitemconfigurations()->getNested("events.drop-inventory-items") == false) $event->setCancelled(true);
     }
 
     public function onInventoryMove(InventoryTransactionEvent $event) {
