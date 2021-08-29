@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Copyright (c) 2021 Vecnavium
+ * LobbyItems is licensed under the GNU Lesser General Public License v3.0
+ * GitHub: https://github.com/Vecnavium\LobbyItems
+ */
+
 namespace Vecnavium\LobbyItems;
 
 use pocketmine\Player;
