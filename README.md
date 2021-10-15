@@ -6,8 +6,9 @@ This plugin allows you to have items for your lobby when a player joins and they
 
 # Features 
 
+We will not take any suggestions for LobbyItems API 3.0.0 for the reason below.
 
-- It simply provides lobby items once a player joins the server 
+LobbyItems on PocketMine API 3.0.0 is now on feature freeze and will only be doing plugin updates when it comes to bug fixes.
 
 
 # Planned features
@@ -37,10 +38,3 @@ You found a bug or a plugin issue?
 - Submit the issue and be patient for a response for a solution to your problem
 
 If you are using a modified Pocketmine-MP build/version you will not get assisted.
-
-# Suggestions
-
-Have a suggestion?
-
-Feel free to contact me in the [Support Discord Server](https://discord.gg/jWFB56RqUN) and suggest the suggestion you have in mind for this plugin!
-No Pocketmine-MP Spoons support! If you are using a modified Pocketmine-MP build/version you will not get assisted.
