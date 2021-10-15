@@ -13,7 +13,7 @@ This plugin allows you to have items for your lobby when a player joins and they
 
 We will not take any suggestions for LobbyItems API 3.0.0 for the reason below.
 
-LobbyItems on PocketMine API 3.0.0 is now on feature freeze and will only be doing plugin updates when it comes to bug fixes.
+LobbyItems on PocketMine API 3.0.0 is now on feature freeze and will only be doing plugin updates when it comes to bug fixes
 
 # Commands & Permissions 
 
