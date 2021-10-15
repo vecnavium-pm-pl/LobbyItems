@@ -6,16 +6,14 @@ This plugin allows you to have items for your lobby when a player joins and they
 
 # Features 
 
-We will not take any suggestions for LobbyItems API 3.0.0 for the reason below.
-
-LobbyItems on PocketMine API 3.0.0 is now on feature freeze and will only be doing plugin updates when it comes to bug fixes.
+- It simply provides lobby items once a player joins the server 
 
 
 # Planned features
 
-I don't have any planned features or ideas for the plugin.
+We will not take any suggestions for LobbyItems API 3.0.0 for the reason below.
 
-Have other suggestions? Let me know in the [Support Discord](https://discord.gg/jWFB56RqUN) or Create an [Issue](https://github.com/Vecnavium/LobbyItems/issues/new) about your suggestion!
+LobbyItems on PocketMine API 3.0.0 is now on feature freeze and will only be doing plugin updates when it comes to bug fixes.
 
 # Commands & Permissions 
 
