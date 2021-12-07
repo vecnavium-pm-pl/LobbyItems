@@ -33,11 +33,11 @@ class Listeners implements Listener {
     }
 
     public function onDrop(PlayerDropItemEvent $event) {
-        if(Main::getInstance()->lobbyitemconfigurations()->getNested("events.drop-inventory-items") == false) $event->setCancelled(true);
+        if(Main::getInstance()->lobbyitemconfigurations()->getNested("events.drop-inventory-items") == false) $event->cancel();
     }
 
     public function onInventoryMove(InventoryTransactionEvent $event) {
-        if(Main::getInstance()->lobbyitemconfigurations()->getNested("events.move-inventory-items") == false) $event->setCancelled(true);
+        if(Main::getInstance()->lobbyitemconfigurations()->getNested("events.move-inventory-items") == false) $event->cancel();
     }
 
 }
