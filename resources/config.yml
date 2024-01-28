@@ -16,10 +16,13 @@ events:
 # Here is a template on how you configure it. You can copy paste the one below the tutorial if you wish.
 
 # lobby-items: DO NOT MODIFY THIS OR ELSE THE PLUGIN WILL NOT WORK!
-#  - 345-0-1-4-§l§4First item-help
+#  - compass-1-4-§l§4First item-help
 
-# 280 is the item ID. You can get a list of Item IDS here: https://minecraft-ids.grahamedgecombe.com
-# 0 Is the meta. There usually is no need to change it to any higher or negative number.
+# compass is the item name. You can get a list of Item Name here: https://minecraft-ids.grahamedgecombe.com
+# or see PMMP API here https://github.com/pmmp/PocketMine-MP/blob/81d5b9ba0676ee520cb9a80a45965952055bc2dc/src/data/bedrock/item/ItemTypeNames.php
+# ignore 'minecraft:'
+# example: 'minecraft:compass' (minecraft-ids.grahamedgecombe.com)
+# example: 'minecraft:compass' (PMMP API)
 # 1 is the amount you want to provide them. (Amount of items for that lobby item)
 # 4 Is the slot number. Not sure how it works? Go here: https://github.com/Vecnavium/LobbyItems/blob/master/inventory%20numbers.png
 # And lastly, the final one which says "help" thats where you put what you want the item it to execute (command)
@@ -27,7 +30,7 @@ events:
 #To avoid any errors, be sure you follow the exact pattern or else you will get errors
 
 lobby-items:
-  - 345-0-1-1-§l§4First item-help
-  - 345-0-1-6-§l§4Second item-say
+  - compass-1-4-§l§4First item-help
+  - iron_ingot-1-6-§l§4Second item-say
 
 #====================================================================================#

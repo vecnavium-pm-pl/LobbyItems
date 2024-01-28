@@ -8,36 +8,57 @@
 
 namespace Vecnavium\LobbyItems;
 
+use Exception;
+use pocketmine\item\Item;
 use pocketmine\player\Player;
-use pocketmine\item\ItemFactory;
-use pocketmine\utils\Config;
+use pocketmine\item\StringToItemParser;
+use pocketmine\nbt\tag\CompoundTag;
+use pocketmine\nbt\tag\IntTag;
+use pocketmine\nbt\tag\StringTag;
 use pocketmine\plugin\PluginBase;
-use Vecnavium\EventListener;
 
 class Main extends PluginBase {
 
+    const TAG_LOBBY_ITEM = "LobbyItems"; //TAG_Int
+    const TAG_ITEM_COMMAND = "ItemCommand"; //TAG_String
+
     public static $instance;
 
-    public static function getInstance(): Main
-    {
+    public static function getInstance() : Main{
         return self::$instance;
     }
 
-    
-    public function lobbyitemconfigurations() {
-        return new Config($this->getDataFolder() . "config.yml", Config::YAML);
-    }
-
-    public function onEnable(): void
-    {
+    protected function onEnable() : void{
+        $this->saveDefaultConfig();
         self::$instance = $this;
         $this->getServer()->getPluginManager()->registerEvents(new Listeners(), $this);
-        $this->saveResource("config.yml");
     }
 
-    public function giveItems(Player $player, $get) {
-        $player->getInventory()->setItem($get[3], ItemFactory::getInstance()->get($get[0], $get[1], $get[2])->setCustomName($get[4]));
-
+    public function giveItems(Player $player, array $get) : void{
+        $item = self::parseItem($get);
+        $player->getInventory()->setItem((int) $get[2], $item);
     }
 
+    public static function parseItem(array $itemData) : Item{
+        $item = StringToItemParser::getInstance()->parse((string) $itemData[0]);
+        $command = "";
+        if(isset($itemData[4])){
+            $command = (string) $itemData[4];
+        }
+        if($item === null){
+            throw new Exception("Failed to parse item name {$itemData[0]}.");
+        }
+        $item->setNamedTag(CompoundTag::create()->setTag(self::TAG_LOBBY_ITEM, new IntTag(1))->setTag(self::TAG_ITEM_COMMAND, new StringTag($command)));
+        $item->setCustomName((string) $itemData[3])->setCount((int) $itemData[1]);
+        return $item;
+    }
+
+    public function getLobbyItems() : array{
+        $items = [];
+        foreach($this->getConfig()->get("lobby-items") as $item){
+            $item = self::parseItem(explode("-",$item));
+            $items[] = $item;
+        }
+        return $items;
+    }
 }
